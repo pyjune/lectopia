@@ -1,0 +1,24 @@
+// m개에서 k개를 고르는 순열 생성
+
+void perm(int n, int k, int m)
+{
+	if (k == n)
+	{
+		for (int i = 0; i < n; i++)
+			printf("%d ", p[i]);
+		printf("\n");
+	}
+	else
+	{
+		for (int i = 0; i < m; i++)
+		{
+			if (used[i] == 0)
+			{
+				used[i] = 1;
+				p[k] = a[i];
+				perm(n, k + 1);
+				used[i] = 0;
+			}
+		}
+	}
+} 
