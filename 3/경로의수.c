@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 			scanf("%d %d", &n1, &n2);
 			adj[n1][n2] = 1; // 인접행렬 생성 
 		}
-    cnt = 0;
+    		cnt = 0;
 		
 		dfs(0, V);
 		printf("#%d %d\n", tc, cnt);
