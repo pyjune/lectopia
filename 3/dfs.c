@@ -6,8 +6,8 @@
 1 2 1 3 3 2 3 4 2 5 5 4  출발node->도착node * E 
 */
 
-int adj[10][10];
-int visited[10];
+int adj[11][11];
+int visited[11];
 void dfs(int n, int k); // n 노드번호..k 노드 개수
 
 int main(int argc, char *argv[]) {
@@ -21,10 +21,10 @@ int main(int argc, char *argv[]) {
 	for(tc=1;tc<=T;tc++)
 	{
 		scanf("%d %d", &V, &E);
-		for(i=1;i<=V;i++)
+		for(i=0;i<=V;i++)
 		{
 			visited[i] = 0;
-			for(j=1;j<=V;j++)
+			for(j=0;j<=V;j++)
 			{
 				adj[i][j] = 0; // 인접행렬 초기화 
 			}
@@ -34,8 +34,8 @@ int main(int argc, char *argv[]) {
 			scanf("%d %d", &n1, &n2);
 			adj[n1][n2] = 1; // 인접행렬 생성 
 		}
-		
-		dfs(1, V); 
+		printf("#%d", tc);
+		dfs(0, V); 
 		
 	}
 	
@@ -46,8 +46,8 @@ void dfs(int n, int k)
 {
 	int i;
 	visited[n] = 1;
-	printf("%d ", n); // visit()
-	for(i=1; i<=k; i++)
+	printf(" %d", n); // visit()
+	for(i=0; i<=k; i++)
 	{
 		if(adj[n][i]==1 && visited[i]==0)
 		{
