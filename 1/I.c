@@ -28,9 +28,10 @@ int main(void)
 				if (m[i][j])
 				{
 					r = 0;
-					c = 0;
+					
 					while (m[i+r][j] != 0)
 					{
+						c = 0;
 						while (m[i+r][j + c] != 0)
 						{
 							m[i + r][j + c] = 0;
