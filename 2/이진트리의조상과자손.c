@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-int ch1[1001];
-int ch2[1001];
-int p[1001];
+int ch1[1002];
+int ch2[1002];
+int p[1002];
 int E;
 int N;
 int find(int n);
