@@ -28,7 +28,7 @@ int main(void)
 				a[r][c] = k++;
 
 		}
-		a[r][c] = k; // 중심부는 따로 처리합니다.
+		a[N/2][N/2] = k; // 중심부는 따로 처리합니다.
 		printf("#%d %d\n", tcase, a[R][C]);
 	}
 }
